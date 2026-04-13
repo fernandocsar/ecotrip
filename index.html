@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Emissão de CO2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🌍 Calculadora de Emissão de CO2</h1>
+        <p>Descubra o impacto ambiental da sua viagem e saiba mais sobre a pegada de carbono do seu meio de transporte.</p>
+    </header>
+
+    <main>
+        <form id="calculadora-form">
+            <div>
+                <label for="origin">Origem:</label>
+                <input type="text" id="origin" list="cities-list" placeholder="Digite a cidade de origem">
+            </div>
+
+            <div>
+                <label for="destination">Destino:</label>
+                <input type="text" id="destination" list="cities-list" placeholder="Digite a cidade de destino">
+            </div>
+
+            <datalist id="cities-list"></datalist>
+
+            <div>
+                <label for="distance">Distância (km):</label>
+                <input type="number" id="distance" readonly placeholder="Será preenchida automaticamente" step="0.1" min="0">
+            </div>
+
+            <div>
+                <label for="manual-distance">
+                    <input type="checkbox" id="manual-distance">
+                    Inserir distância manualmente
+                </label>
+            </div>
+
+            <fieldset>
+                <legend>Modo de Transporte:</legend>
+                <div class="transport-grid">
+                    <label class="transport-option">
+                        <input type="radio" name="transport" value="bicicleta">
+                        <span data-emoji="🚴">🚴 Bicicleta</span>
+                    </label>
+
+                    <label class="transport-option">
+                        <input type="radio" name="transport" value="carro" checked>
+                        <span data-emoji="🚗">🚗 Carro</span>
+                    </label>
+
+                    <label class="transport-option">
+                        <input type="radio" name="transport" value="onibus">
+                        <span data-emoji="🚌">🚌 Ônibus</span>
+                    </label>
+
+                    <label class="transport-option">
+                        <input type="radio" name="transport" value="caminhao">
+                        <span data-emoji="🚚">🚚 Caminhão</span>
+                    </label>
+                </div>
+            </fieldset>
+
+            <button type="button" id="calcular-btn">Calcular</button>
+        </form>
+    </main>
+
+    <section id="results" class="hidden">
+        <div id="results-content"></div>
+    </section>
+
+    <section id="comparison" class="hidden">
+        <div id="comparison-content"></div>
+    </section>
+
+    <section id="carbon-credits" class="hidden">
+        <div id="carbon-credits-content"></div>
+    </section>
+
+    <footer>
+        <p>Desenvolvido por Fernando César</p>
+    </footer>
+    <script src="rotas.js"></script>
+    <script src="initDatalist.js"></script>
+    <script src="config.js"></script>
+    <script src="calculator.js"></script>
+    <script src="UI.js"></script>
+</body>
+</html>
