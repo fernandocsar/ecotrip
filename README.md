@@ -3,8 +3,6 @@
 
 > Estime o impacto ambiental das suas viagens de forma simples e rápida.
 
-![EcoTrip Screenshot](https://via.placeholder.com/600x300?text=EcoTrip+Screenshot)
-
 ## Sobre o projeto
 
 A **Calculadora EcoTrip** é uma aplicação web para estimar as emissões de CO₂ em viagens, considerando diferentes meios de transporte (carro, ônibus, avião, etc.). O objetivo é promover a conscientização ambiental de forma prática e acessível.
